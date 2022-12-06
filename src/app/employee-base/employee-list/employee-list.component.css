@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    height: 80px;
+    background: #243b55;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px)/2);
+}
+
+.logo{
+    color:#FFF;
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color:#fff; 
+    padding: 0 1.5rem;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color:rgb(164, 175, 235); 
+    padding: 0 1.5rem;
+}
+
+
+.empList{
+    background: #668cb8;
+}
+
+.header2{
+    font-size: 45px;
+    height: 5vh;
+    width: 40rem;
+    text-align: center;
+}
+
+.empList-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 0rem calc((100vw - 1300px)/2); 
+}
+.list-title{
+    flex-direction: row;
+    justify-content: normal;
+    text-align: center;
+    color: #000;
+    padding: 0rem 25rem;
+}
+
+.employee-table{
+    display: table;
+    width: 55rem;
+    height: 60vh;
+    margin-top: 5rem;
+    margin-right: 10rem;
+
+}
+.thead{
+    background-color: #111e2c5e;
+    font-size: 25px;
+}
+
+.tbody{
+    font-size: 18px;
+}
+
+.firstName{
+    width: 50%;
+}
+
+.lastName{
+    width: 50%;
+}
+.employee-table th, td{
+    text-align: center;
+    border-bottom: 1px solid #243b55;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 1.5rem;
+  background-color: #243b55;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: .95rem;
+  padding: 1rem ;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+button:hover span {
+    padding-right: 20px;
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -22px;
+    transition: 0.5s;
+  }
+  
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.details-button{
+    display: inline-block;
+    border-radius: 1.5rem;
+    background-color: #243b55;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: .8rem;
+    padding: .6rem ;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.details-button:hover{
+    background-color: #FFFFFF;
+    color: #000;
+}

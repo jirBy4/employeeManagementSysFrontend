@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Website</title>
+        <link rel="stylesheet" href="employee-details.component.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">DemoLogo</div>
+            <div class="nav-items">
+                <a href="/employees">Employees</a>
+                <a href="/store">Store</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+        <div class="body-wrapper">
+          <div class="wrapper">
+            <div class="left">
+              <h4>{{employee.firstName}} {{employee.lastName}}</h4>
+            </div>
+            <div class="right">
+              <div class="info">
+                <div class="info-data">
+                  <h3>Information</h3>
+                  <div class="data">              
+                    <h4>Email</h4>
+                    <p>{{employee.email}}</p>
+                  </div>
+                  <div class="data">
+                    <h4>Phone Number</h4>
+                    <p>{{employee.phoneNo}}</p>
+                  </div>
+                  <div class="data">
+                    <h4>Age</h4>
+                    <p>{{employee.age}}</p>
+                  </div>
+                  <div class="data">
+                    <h4>Favorite Color</h4>
+                    <p>{{employee.favColor}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-choices">
+                <button [routerLink]="['/employees/update', employee.id]">Update Employee</button>
+                <button (click) = "deleteEmployee(employee.id)">Delete Employee</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

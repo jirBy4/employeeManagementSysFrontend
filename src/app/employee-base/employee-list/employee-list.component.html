@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Website</title>
+        <link rel="stylesheet" href="employee-list.component.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">DemoLogo</div>
+            <div class="nav-items">
+                <a href="/employees">Employees</a>
+                <a href="/store">Store</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+        <section class="empList">
+          <div class="empList-container">
+            <div class="list-title">
+              <h2 class="header2">Employees List</h2>
+              <p>
+                <table class = "employee-table">
+                  <thead class="thead">
+                    <tr><td class="firstName">First Name</td><td class="lastName">Last Name</td></tr>
+                  </thead>
+                  <tbody class="tbody">
+                    <tr #employeeRef *ngFor = "let employee of employees">
+                      <td>{{employee.firstName}}</td>
+                      <td>{{employee.lastName}}</td>
+                      <td><button class="details-button" [routerLink]="['/employees', employee.id]">Details</button> </td>
+                    </tr>
+                  </tbody>
+                  <button class="button" style="vertical-align:middle" [routerLink]="['/employees/create']">
+                    <span>Add a new Employee!</span>
+                  </button> 
+                  <button class="button" style="vertical-align:middle" type="button" (click)="back()">
+                    <span>Back to home page</span>
+                  </button>
+                </table>
+            </div>
+          </div>
+        </section>
+    </body>
+</html>

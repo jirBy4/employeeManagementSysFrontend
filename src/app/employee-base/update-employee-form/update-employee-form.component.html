@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Website</title>
+        <link rel="stylesheet" href="update-employee-form.component.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">DemoLogo</div>
+            <div class="nav-items">
+                <a href="/employees">Employees</a>
+                <a href="/store">Store</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+        <div class="body-wrapper">
+          <div class="wrapper">
+            <div class="left">
+              <h4>
+                <input type="text" id ="firstName" [(ngModel)] = "employee.firstName" name = "firstName">
+                <input type="text" id ="lastName" [(ngModel)] = "employee.lastName" name = "lastName">
+                </h4>
+            </div>
+            <div class="right">
+              <form (ngSubmit)="onSubmit()">
+                <div class="info">
+                  <div class="info-data">
+                    <h3>Information</h3>
+                    <div class="data">              
+                      <h4>Email</h4>
+                      <p><input type="text" class = "form-control" id ="email" [(ngModel)] = "employee.email" name = "email"></p>
+                    </div>
+                    <div class="data">
+                      <h4>Phone Number</h4>
+                      <p><input type="text" class = "form-control" id ="phoneNo"[(ngModel)] = "employee.phoneNo" name = "phoneNo"></p>
+                    </div>
+                    <div class="data">
+                      <h4>Age</h4>
+                      <p><input type="text" class = "form-control" id ="age"[(ngModel)] = "employee.age" name = "age"></p>
+                    </div>
+                    <div class="data">
+                      <h4>Favorite Color</h4>
+                      <p><input type="text" class = "form-control" id ="favColor"[(ngModel)] = "employee.favColor" name = "favColor"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-choices">
+                  <button class = "btn btn-success" type="submit">Save Changes</button>
+                  <button type="button" (click)="goToEmployeeList()"> Back to employees page</button>
+                </div>
+              </form>
+            </div> 
+          </div>
+        </div>
+    </body>
+</html>
