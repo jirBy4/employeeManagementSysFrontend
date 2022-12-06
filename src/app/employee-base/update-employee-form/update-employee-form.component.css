@@ -97,6 +97,22 @@ nav a:hover{
     color: #666d74;
 }
 
+.name-textfield{
+    width: 90%;
+}
+
+.name-textfield:focus{
+    background-color: #bccbdd;
+}
+
+.wrapper .right .info-data .data p input{
+    width: 100%;
+}
+
+.wrapper .right .info-data .data p input:focus{
+    background-color: #bccbdd;
+}
+
 .wrapper .right .btn-choices{
     width: 100%;
     display: flex;
